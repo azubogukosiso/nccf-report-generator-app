@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap");
+@import "tailwindcss";
+@plugin "daisyui";
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-bold;
+  }
+
+  h1 {
+    @apply text-4xl;
+  }
+
+  h2 {
+    @apply text-3xl;
+  }
+
+  h3 {
+    @apply text-2xl;
+  }
+
+  h4 {
+    @apply text-xl;
+  }
+
+  p {
+    @apply text-sm;
+  }
+}
+
+@layer components {
+  .ProseMirror {
+    @apply outline-none min-h-[200px] p-4 border border-gray-300 rounded;
+    white-space: pre-wrap;
+  }
+
+  .ProseMirror ul {
+    @apply list-disc pl-6 my-4;
+  }
+
+  .ProseMirror li {
+    @apply my-1;
+  }
+
+  .ProseMirror p {
+    @apply my-2;
+  }
+}
+
+html {
+  font-family: "Google Sans Flex", sans-serif;
+  background: rgb(255, 255, 216);
+  color: #000000;
+}
