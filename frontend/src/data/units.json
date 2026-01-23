@@ -25,7 +25,7 @@
     "unitId": 4,
     "recordFields": {
       "date": "",
-      "topic": "",
+      "title": "",
       "text": "",
       "minister": "",
       "attendance": 0,
@@ -37,7 +37,7 @@
     "unitId": 5,
     "recordFields": {
       "date": "",
-      "topic": "",
+      "title": "",
       "text": "",
       "minister": "",
       "attendance": 0,
@@ -79,7 +79,7 @@
       "date": "",
       "program": "",
       "minister": "",
-      "topic": "",
+      "title": "",
       "text": "",
       "attendance": 0,
       "venue": ""
@@ -91,7 +91,7 @@
     "recordFields": {
       "date": "",
       "minister": "",
-      "topic": "",
+      "title": "",
       "text": "",
       "attendance": 0,
       "venue": ""

@@ -22,7 +22,7 @@ const InputRecordsComponent = ({
 
   units.find((unitObj) => {
     if (unitObj.unitId === unit?.unitId)
-      unitRecordFields = unitObj.recordFields;
+      unitRecordFields = unitObj.recordFields as recordFieldType;
   });
 
   const [records, setRecords] = useState(() => {

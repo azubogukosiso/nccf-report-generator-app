@@ -1,16 +1,18 @@
 import { removeRecordField } from "../functions/removeRecordField";
 
+import DiscipleshipRecordFieldComponent from "./unitFieldComponents/DiscipleshipRecordFieldComponent";
+import FellowshipRecordFieldComponent from "./unitFieldComponents/FellowshipRecordFieldComponent";
 import BattleAxeRecordFieldComponent from "./unitFieldComponents/BattleAxeRecordFieldComponent";
 import BibleStudyRecordFieldComponent from "./unitFieldComponents/BibleStudyRecordFieldComponent";
 import ChildrenEvangRecordFieldComponent from "./unitFieldComponents/ChildrenEvangRecordFieldComponent";
 import EvangRecordFieldComponent from "./unitFieldComponents/EvangRecordFieldComponent";
 import PrayerRecordFieldComponent from "./unitFieldComponents/PrayerRecordFieldComponent";
 import SistersRecordFieldComponent from "./unitFieldComponents/SistersRecordFieldComponent";
+import KPCRecordFieldComponent from "./unitFieldComponents/KPCRecordFieldComponent";
 
 import { useAuthContext } from "../hooks/useAuthContext";
 
 import type { recordFieldType } from "../types/recordFieldType";
-import KPCRecordFieldComponent from "./unitFieldComponents/KPCRecordFieldComponent";
 
 type RecordFieldProps = {
   index: number;
@@ -54,7 +56,7 @@ const RecordFieldComponent = ({
       }`}
     >
       {unit?.unitId === 1 && (
-        <BattleAxeRecordFieldComponent
+        <DiscipleshipRecordFieldComponent
           handleChange={handleChange}
           index={index}
           recordData={recordData}
@@ -62,7 +64,7 @@ const RecordFieldComponent = ({
       )}
 
       {unit?.unitId === 2 && (
-        <BibleStudyRecordFieldComponent
+        <FellowshipRecordFieldComponent
           handleChange={handleChange}
           index={index}
           recordData={recordData}
@@ -70,7 +72,7 @@ const RecordFieldComponent = ({
       )}
 
       {unit?.unitId === 3 && (
-        <ChildrenEvangRecordFieldComponent
+        <BattleAxeRecordFieldComponent
           handleChange={handleChange}
           index={index}
           recordData={recordData}
@@ -78,7 +80,7 @@ const RecordFieldComponent = ({
       )}
 
       {unit?.unitId === 4 && (
-        <EvangRecordFieldComponent
+        <BibleStudyRecordFieldComponent
           handleChange={handleChange}
           index={index}
           recordData={recordData}
@@ -86,7 +88,15 @@ const RecordFieldComponent = ({
       )}
 
       {unit?.unitId === 5 && (
-        <KPCRecordFieldComponent
+        <ChildrenEvangRecordFieldComponent
+          handleChange={handleChange}
+          index={index}
+          recordData={recordData}
+        />
+      )}
+
+      {unit?.unitId === 6 && (
+        <EvangRecordFieldComponent
           handleChange={handleChange}
           index={index}
           recordData={recordData}
@@ -94,6 +104,14 @@ const RecordFieldComponent = ({
       )}
 
       {unit?.unitId === 7 && (
+        <KPCRecordFieldComponent
+          handleChange={handleChange}
+          index={index}
+          recordData={recordData}
+        />
+      )}
+
+      {unit?.unitId === 9 && (
         <PrayerRecordFieldComponent
           handleChange={handleChange}
           index={index}
@@ -101,7 +119,7 @@ const RecordFieldComponent = ({
         />
       )}
 
-      {unit?.unitId === 8 && (
+      {unit?.unitId === 10 && (
         <SistersRecordFieldComponent
           handleChange={handleChange}
           index={index}

@@ -1,6 +1,6 @@
 import type { recordFieldProps } from "../../types/recordFieldProps";
 
-const SistersRecordFieldComponent = ({
+const FellowshipRecordFieldComponent = ({
   handleChange,
   index,
   recordData,
@@ -25,31 +25,15 @@ const SistersRecordFieldComponent = ({
       </div>
 
       <div className="flex flex-col items-center w-full mb-5">
-        <label htmlFor={`topic${index + 1}`} className="w-1/2 text-xs">
-          Topic:
+        <label htmlFor={`title${index + 1}`} className="w-1/2 text-xs">
+          Title:
         </label>
         <input
           type="text"
-          placeholder="Enter topic..."
+          placeholder="Enter title..."
           id={`title${index + 1}`}
           name={`title${index + 1}`}
           value={recordData?.title}
-          onChange={handleChange}
-          required
-          className="focus:!outline-none rounded-t-md bg-white p-2 w-1/2 border-b"
-        />
-      </div>
-
-      <div className="flex flex-col items-center w-full mb-5">
-        <label htmlFor={`minister${index + 1}`} className="w-1/2 text-xs">
-          Minister:
-        </label>
-        <input
-          type="text"
-          placeholder="Enter minister..."
-          id={`minister${index + 1}`}
-          name={`minister${index + 1}`}
-          value={recordData?.minister}
           onChange={handleChange}
           required
           className="focus:!outline-none rounded-t-md bg-white p-2 w-1/2 border-b"
@@ -66,6 +50,22 @@ const SistersRecordFieldComponent = ({
           id={`text${index + 1}`}
           name={`text${index + 1}`}
           value={recordData?.text}
+          onChange={handleChange}
+          required
+          className="focus:!outline-none rounded-t-md bg-white p-2 w-1/2 border-b"
+        />
+      </div>
+
+      <div className="flex flex-col items-center w-full mb-5">
+        <label htmlFor={`minister${index + 1}`} className="w-1/2 text-xs">
+          Minister:
+        </label>
+        <input
+          type="text"
+          placeholder="Enter minister..."
+          id={`minister${index + 1}`}
+          name={`minister${index + 1}`}
+          value={recordData?.minister}
           onChange={handleChange}
           required
           className="focus:!outline-none rounded-t-md bg-white p-2 w-1/2 border-b"
@@ -108,4 +108,4 @@ const SistersRecordFieldComponent = ({
   );
 };
 
-export default SistersRecordFieldComponent;
+export default FellowshipRecordFieldComponent;

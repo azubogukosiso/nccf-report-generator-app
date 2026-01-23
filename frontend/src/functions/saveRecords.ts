@@ -4,8 +4,8 @@ export const saveRecords = async (
   e: React.MouseEvent<HTMLButtonElement>,
   recordToSave: {
     records: recordFieldType[];
-    month: string;
-    year: string;
+    month: string | undefined;
+    year: string | undefined;
     unitId: number | undefined;
   }
 ) => {

@@ -4,8 +4,8 @@ export const editRecords = async (
   e: React.MouseEvent<HTMLButtonElement>,
   editedRecords: {
     records: recordFieldType[];
-    month: string;
-    year: string;
+    month: string | undefined;
+    year: string | undefined;
     recordId: null | string | undefined;
   }
 ) => {
